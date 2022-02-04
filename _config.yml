@@ -114,3 +114,5 @@ pagination:
   indexpage: 'index'
 
 ############################################################
+
+staticman_url: https://staticman--api.herokuapp.com/v3/entry/github/yarastu/222/master/comments
