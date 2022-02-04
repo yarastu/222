@@ -1,0 +1,15 @@
+comments:
+allowedFields: ["name", "email", "message"]
+allowedOrigins: ["localhost", "alphagro.tk"]
+filename: "entry{@timestamp}"
+generatedFields:
+  date:
+    type: date
+    options:
+      format: "timestamp-seconds"
+githubAuth.clientId: "Iv1.430c2debf8f19141"
+githubAuth.clientSecret: "d01d0c7e6d853b163d87f187bceaa7450913a304"
+moderation: true
+path: "_data/comment/{options.slug}"
+transforms:
+  email: "md5"
