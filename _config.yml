@@ -125,5 +125,5 @@ pagination:
 #
 # for me, this line reads:
 # https://staticman-travisdownsio.herokuapp.com/v2/entry/travisdowns/travisdowns.github.io/master/comments
-staticman_url: https://staticman--api.herokuapp.com/v2/entry/yarastu/222/master/comments
+staticman_url: https://api-staticman.herokuapp.com/v2/entry/yarastu/222/master/comments
 
