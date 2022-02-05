@@ -43,6 +43,27 @@ layout: default
   <button type="submit">Go!</button>
 </form>
   
+  <!-- Comments -->
+{% if site.data.comments[page.slug] %}
+<h3>
+	{% if site.data.comments[page.slug].size > 1 %} {{
+	site.data.comments[page.slug] | size }} {% endif %} Comments:
+</h3>
+{% assign comments = site.data.comments[page.slug] | sort %} {% for comment in
+comments reversed%}
+<label>
+	{% if comment[1].url != ''%}
+	<a href="{{ comment[1].url }}">
+		{% endif %}
+		<strong>{{ comment[1].name }}</strong>
+		{% if comment[1].url %}
+	</a>
+	{% endif %}
+</label>
+<em>{{ comment[1].date | date: "%B %d, %Y" }}</em>
+<p>{{ comment[1].message | markdownify }}</p>
+{% endfor %} {% endif %}
+  
   <a class="u-url" href="{{ page.url | relative_url }}" hidden></a>
 </article>
 
